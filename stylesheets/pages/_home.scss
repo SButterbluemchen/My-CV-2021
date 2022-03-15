@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+#main {
+  text-align: left;
+  @include flex-wrap(wrap, center);
+  .main-intro {
+    @include flex-wrap(wrap, center);
+    h1 {
+      text-align: left;
+    }
+    figure {
+      width: 10em;
+      height: 10em;
+      img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: 0em 0em;
+        border-radius: 100%;
+      }
+    }
+    div {
+      max-width: 50%;
+      margin-bottom: 5em;
+    }
+  }
+  .main-competences {
+    @include flex-wrap(nowrap, center);
+    div {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      figure {
+        width: 5em;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#skills {
+  article {
+    width: 250em;
+    height: 15em;
+    margin: auto;
+    padding: 2em 5em;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
+    border-radius: 1em;
+    width: 65%;
+    ul {
+      @include flex-wrap(wrap, flex-start);
+      li {
+        width: 50%;
+      }
+    }
+  }
+}
+
+#experience {
+  article {
+    margin: auto;
+    margin-top: 2em;
+    padding: 2em 5em;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
+    border-radius: 1em;
+    width: 65%;
+    @include flex-wrap(wrap, flex-start);
+    figure {
+      width: 3em;
+      height: 3em;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.project-section {
+  @include flex-wrap(wrap, center);
+  margin-top: 1em;
+  figure {
+    width: 35em;
+    height: 17em;
+    img {
+      width: 100%;
+      margin: auto;
+      max-height: 100%;
+    }
+  }
+}

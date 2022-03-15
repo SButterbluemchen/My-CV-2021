@@ -1,230 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sina Brauch Resume</title>
+  <title>Curriculum vitae de Sina Brauch</title>
+  <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
 </head>
 <body>
-  <header>
-    <img src="img/logo-header.png" alt="logo resume" title="my logo"/>
+  <section class="container">
+    <!-- NAVIGATON BAR -->
     <nav>
-      <ul>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#conctact">Contact</a></li>
+      <ul class="menu">
+        <li class="logo"><a href="index.html" class="active"><img src="img/logo_cos_white_2lines.png" alt="Home Logo CV Sina Brauch"></a></li>
+        <li><a href="#about" class="item">Compétences & parcours</a></li>
+        <li><a href="#projects" class="item">Réalisations</a></li>
+        <li><a href="#conctact" class="item">Contact</a></li>
+        <li class="logo"><a href="index.html" class="active"><img src="img/logo_cos_white_2lines.png" alt="Download CV Sina Brauch"></a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
       </ul>
     </nav>
-  </header>
-  <!-- About Section  --> 
-  <section id="about">
-    <article id="profile_container">
-      <img src="img/Sina_Profile_Picture.png" alt="Sina Brauch profile picture">
-      <h1>Sina Brauch</h1>
-      <hr>
-      <h2>International Front-end Developer</h2>
+    <!-- UP BUTTON -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/up-arrow.png" alt="top button"></button>
+    <!-- Home section  --> 
+    <main id="main">
+      <article class="main-intro">
+        <figure>
+          <img src="img/sina-brauch-photo-profil.jpeg" alt="photo CV" title="mon image"/>
+        </figure>
+        <div>
+          <h1>Bonjour, Je m'appelle Sina !</h1>
+          <p>Front-end développeuse trilingue avec 5 ans d'expérience dans le marketing et la gestion des sites web. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore mollitia deserunt repudiandae ullam, consectetur reiciendis atque reprehenderit quidem temporibus doloribus at delectus rerum dolorum aspernatur dolorem suscipit explicabo aliquam magnam.</p>
+        </div>
+      </article>
+      <article class="main-competences">
+        <div>
+          <figure>
+            <img src="img/light-bulb.png">
+          </figure>
+          <p>front-end</p>
+        </div>
+        <div>
+          <figure>
+            <img src="img/light-bulb.png">
+          </figure>
+          <p>mobile</p>
+        </div>
+        <div>
+          <figure>
+            <img src="img/light-bulb.png">
+          </figure>
+          <p>web-design</p>
+        </div>
+        <div>
+          <figure>
+            <img src="img/light-bulb.png">
+          </figure>
+          <p>marketing</p>
+        </div>
+        <div>
+          <figure>
+            <img src="img/light-bulb.png">
+          </figure>
+          <p>allemand</p>
+        </div>
+      </article>
+    </main>
+    <!-- About
+    <section id="about">
         <div id="social_about">
           <a href="https://www.linkedin.com/in/sina-brauch-6500a2aa/" target="_blank"><img src="img/linkedin.png" alt="Sina Brauch linkedin"></a>
           <a href="https://github.com/SButterbluemchen" target="_blank"><img src="img/github.png" alt="Sina Brauch Github Account"></a>
         </div>
-    </article>
-    <article id="greetings-container">
-      <h3>Hello</h3>
-      <p>Here's who I am & what I do</p>
-      <div>
-        <a class="view-button" href="#resume">View</a>
-        <a class="download-button" href="LINK" target="_blank">Download CV</a>
-      </div>
-      <p>I am passioned about everything that concerns <strong>technology, web and graphism</strong>. You're looking for someone international to join your team? Then keep reading.</p>
-    </article>
-  </section>
-  <!-- Resume Section -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <article class="resume-container">
-      <div>
-        <img src="img/briefcase.png" alt="Work experience">
-        <h3>Work experience</h3>
-      </div>
-      <div>
-        <h4>2017 - 2021 | Business Developer</h4>
-        <h5>Equisense - Lille</h5>
-        <ul>
-          <li>Development of the German market</li>
-          <li>International marketing</li>
-          <li>Website management (Prestashop, shopify)</li>
-          <li>Blog management (Wordpress)</li>
-          <li>Social media management</li>
-          <li>Customer support</li>
-        </ul>
-      </div>
-      <div>
-        <h4>2015 - 2017 | Business Developer</h4>
-        <h5>Clic2Buy - Lille</h5>
-        <ul>
-          <li>Business plan for the German market</li>
-          <li>Website management</li>
-          <li>Graphic designing</li>
-          <li>Product flow management</li>
-          <li>Social media management</li>
-          <li>Customer reporting</li>
-        </ul>
-      </div>
-    </article>
-    <article>
-      <div>
-        <img src="img/education.png" alt="Education">
-        <h3>Education</h3>
-      </div>
-      <div>
-        <h4>2022 | Web Integrator - Simplon Lille </h4>
-        <h5>HTML & CSS Certificate</h5>
-        <ul>
-          <li>Git & Github</li>
-          <li>HTML & CSS</li>
-          <li>Javascript basics</li>
-        </ul>
-      </div>
         <div>
-          <h4>2015 | International Management - IAE Lille </h4>
-          <h5>Master's degree</h5>
+          <a class="view-button" href="#resume">View</a>
+          <a class="download-button" href="LINK" target="_blank">Download CV</a>
+        </div>
+        <article>
+          <div>
+            <img src="img/like.png" alt="Interests">
+            <h3>Interests</h3>
+          </div>
+          <div>
+            <img src="img/Sina_Travel.png" alt="Travelling">
+            <img src="img/Sina_Sport.png" alt="Sports">
+          </div>
+        </article>
+    </section>-->
+    <!-- Competence Section -->
+    <section id="skills">
+      <h2>Compétences</h2>
+      <article>
+        <h3>Front-end</h3>
+        <p>Création et intégration de sites web responsives, accessibles et répondant aux normes W3C.</p>
+        <ul>
+          <li>HTML5</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>SASS</li>
+          <li>Javascript</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Web design</h3>
+        <p>Création de wireframes et maquettes selon les règles UX lors de la création d'une interface utilisateur.</p>
+        <ul>
+          <li>Photoshop</li>
+          <li>Figma</li>
+        </ul>
+        </article>
+        <article>
+          <h3>CMS</h3>
+          <p>Gestion et traduction des thèmes et plugins.</p>
           <ul>
-            <li>Business management</li>
-            <li>Intercultural management</li>
+            <li>WordPress</li>
+            <li>Shopify</li>
+            <li>Prestashop</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Langues</h3>
+          <p>Native allemande, je suis bilingue en anglais et francais avec un niveau C2 et je suis certifiée pour traduire et interpréter entre ses 3 langues.</p>
+          <ul>
+            <li>Allemand</li>
+            <li>Anglais</li>
+            <li>Francais</li>
+          </ul>
+          </article>
+        <article>
+          <h3>Environnement de travail</h3>
+          <ul>
+            <li>Workflow : Git, GitHub</li>
+            <li>Savoir-être : rigeur, organisation, force de proposition, dynamique, travail en équipe</li>
+          </ul>
+        </article>
+      </section>
+      <!-- Experience Section -->
+    <section id="experience">
+      <h2>Parcours</h2>
+      <article>
+        <figure>
+          <img src="img/education.png" alt="formation logo">
+        </figure>
+        <div>
+          <h3>Dévelopeur front-end</h3>
+          <h4>Simplon, Roubaix</h4>
+          <ul>
+            <li>Javascript</li>
+            <li>Introduction React</li>
+            <li>Test unitaires</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="img/education.png" alt="formation logo">
+        </figure>
+        <div>
+          <h3>Dévelopeur intégrateur web</h3>
+          <h4>Simplon, Lille</h4>
+          <ul>
+            <li>Introduction front-end</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="img/briefcase.png" alt="travail logo">
+        </figure>
+        <div>
+          <h3>Marketing international</h3>
+          <h4>Equisense, Lille</h4>
+          <ul>
+            <li>Gestion du siteweb(Prestashop,Shopify)</li>
+            <li>Refonte du site web</li>
+            <li>Gestion du blog (Wordpress)</li>
+            <li>Développement des marchés allemand & anglais</li>
+            <li>Gestion des réseaux sociaux & emailing</li>
+            <li>Gestion du support client</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="img/briefcase.png" alt="travail logo">
+        </figure>
+        <div>
+          <h3>Data manager & chef de projet</h3>
+          <h4>Click2Buy, Lille</h4>
+          <ul>
+            <li>Obtention,vérification et intégration des flux produit</li>
+            <li>Analyse de données</li>
+            <li>Reporting client</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="img/briefcase.png" alt="travail logo">
+        </figure>
+        <div>
+          <h3>Marketing international</h3>
+          <h4>Click2Buy, Lille</h4>
+          <ul>
+            <li>Gestion du site web</li>
+            <li>Gestion du blog et rédaction d'articles</li>
+            <li>Refonte du site web</li>
+            <li>Création des supports marketing</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <figure>
+          <img src="img/education.png" alt="formation logo">
+        </figure>
+        <div>
+          <h3>Management international</h3>
+          <h4>BAC +5 - IAE Lille</h4>
+          <ul>
+            <li>Gestion d’entreprise</li>
+            <li>Création d’unbusinesplan</li>
+            <li>Communication interculturele</li>
             <li>Marketing</li>
-            <li>Finances</li>
           </ul>
         </div>
+      </article>
+      <article>
+        <figure>
+          <img src="img/education.png" alt="formation logo">
+        </figure>
         <div>
-          <h4>2014 | Translation - University of Mainz </h4>
-          <h5>Bachelor's degree</h5>
+          <h3>Interpretation & traduction</h3>
+          <h4>BAC +4 - Université de Mainz </h4>
           <ul>
-            <li>Translation German, English and French</li>
-            <li>Intensive medicine and marketing classes</li>
+            <li>Traduction en allemand, anglais et français</li>
+            <li>Cours approfondis en marketing & médecine</li>
           </ul>
         </div>
-    </article>
-    <article>
+      </article>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Réalisation</h2>
+      <section class="project-section">
+        <div>
+          <figure>
+            <img src="img/Advent_calendar.jpg" alt="advent calendar projet">
+          </figure>
+          <div>
+            <h4>Calendrier de l'avent</h4>
+            <p>TECHNOS</p>
+            <a class="btn--filled" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">Live demo</a>
+            <a class="btn--empty" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <img src="img/Corona_day_counter.jpg" alt="corona day counter projet">
+          </figure>
+          <div>
+            <h4>Corona day counter</h4>
+            <p>TECHNOS</p>
+            <a class="btn--filled" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">Live demo</a>
+            <a class="btn--empty" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">GitHub</a>
+          </div>
+        </div>
+     </section>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Let's get in touch</h2>
+    <!-- Contact Form -->
+    <div class="container">
+      <form action="action_page.php">
+        <label for="subject">Your message:</label>
+        <textarea id="subject" name="subject" placeholder="Hi Sina, I'm contacting you because ..." style="height:200px"></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </div>
+    <!-- Social media -->
+    <div id="social_contact">
+      <a href="https://www.linkedin.com/in/sina-brauch-6500a2aa/" target="_blank"><img src="img/linkedin.png" alt="Sina Brauch linkedin"></a>
+      <a href="https://github.com/SButterbluemchen" target="_blank"><img src="img/github.png" alt="Sina Brauch Github Account"></a>
+    </div>
+    <a class="top-button" href="#about">Top</a>
+    </section>
+    <!-- Footer -->
+    <footer>
       <div>
-        <img src="img/light-bulb.png" alt="Skills">
-        <h3>Skills</h3>
-      </div>
-      <div id="language-flags">
-        <div>
-          <img src="img/germany.png" alt="German flag">
-          <p>Native</p>
-        </div>
-        <div>
-          <img src="img/france.png" alt="French flag">
-          <p>Bilingual</p>
-        </div>
-        <div>
-          <img src="img/united-kingdom.png" alt="English flag">
-          <p>Bilingual</p>
-        </div>
-      </div>
-      <div id="skill-details">
-        <div>
-          <p>HTML</p>
-          <div></div>
-          <p>90%</p>
-        </div>
-        <div>
-          <p>CSS</p>
-          <div></div>
-          <p>90%</p>
-        </div>
-        <div>
-          <p>Javascript</p>
-          <div></div>
-          <p>10%</p>
-        </div>
-        <div>
-          <p>Photoshop</p>
-          <div></div>
-          <p>30%</p>
-        </div>
-      </div>
-    </article>
-    <article>
-      <div>
-        <img src="img/like.png" alt="Interests">
-        <h3>Interests</h3>
+        <p>&copy; Copyright 2021 Sina Brauch</p>
       </div>
       <div>
-        <img src="img/Sina_Travel.png" alt="Travelling">
-        <img src="img/Sina_Sport.png" alt="Sports">
+        <h5>Call</h5>
+        <p>+33628368546</p>
       </div>
-    </article>
-  </section>
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <a href="https://quarantinedays.herokuapp.com/SiteWebCorona.html" target="_blank"><img src="img/Corona_day_counter.jpg" style="width:100%" alt="Corona Day Counter"></a>
-        <div class="text">Corona Day Counter</div>
+      <div>
+        <h5>Write</h5>
+        <p>sina.brauch@gmail.com</p>
       </div>
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <a href="https://christine-advent-calendar.herokuapp.com/#/" target="_blank"><img src="img/Advent_calendar.jpg" style="width:100%" alt="Advent Calendar"></a>
-        <div class="text">Advent Calendar</div>
-      </div>
-      <!-- SLIDE 3 TO ADD WHEN AVAILABLE
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="img3.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
-      </div> 
-      -->
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+    </footer>
+    <script src="js/main.js"></script>
   </section>
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Let's get in touch</h2>
-  <!-- Contact Form -->
-  <div class="container">
-    <form action="action_page.php">
-      <label for="subject">Your message:</label>
-      <textarea id="subject" name="subject" placeholder="Hi Sina, I'm contacting you because ..." style="height:200px"></textarea>
-      <input type="submit" value="Send">
-    </form>
-  </div>
-  <!-- Social media -->
-  <div id="social_contact">
-    <a href="https://www.linkedin.com/in/sina-brauch-6500a2aa/" target="_blank"><img src="img/linkedin.png" alt="Sina Brauch linkedin"></a>
-    <a href="https://github.com/SButterbluemchen" target="_blank"><img src="img/github.png" alt="Sina Brauch Github Account"></a>
-  </div>
-  <a class="top-button" href="#about">Top</a>
-  </section>
-  <!-- Footer -->
-  <footer>
-    <div>
-      <p>&copy; Copyright 2021 Sina Brauch</p>
-    </div>
-    <div>
-      <h5>Call</h5>
-      <p>+33628368546</p>
-    </div>
-    <div>
-      <h5>Write</h5>
-      <p>sina.brauch@gmail.com</p>
-    </div>
-  </footer>
 </body>
 </html>

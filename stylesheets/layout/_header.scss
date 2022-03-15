@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// NAV BAR - RESPONSIVE
+// -----------------------------------------------------------------------------
+
+nav {
+  background: $secondary-color;
+  padding: 0.5em 1.2em;
+  margin: 0em -1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.menu {
+  list-style-type: none;
+  @include flex-wrap(wrap, space-between, center);
+  @include media(tablet) {
+    justify-content: center;
+  }
+  li a {
+    display: block;
+    padding: 0.2em 0.5em;
+     @include media (screen) {
+      padding: 0.2em 0em;
+    }
+  }
+}
+
+.toggle {
+  order: 1;
+  font-size: 2em;
+  margin-top: 0.1em;
+  img {
+    max-width: 1.3em;
+  }
+  @include media(tablet) {
+    flex: 1;
+    text-align: right;
+    order: 1;
+  }
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.logo {
+  padding: 0em;
+  margin-left: -1em;
+  @include media(tablet) {
+    flex: 1;
+  }
+  img {
+    width: 7em;
+    @include media(desktop) {
+      width: 9em;
+    }
+  }
+}
+
+.item {
+  padding: 0.5em;
+  order: 2;
+  text-align: left;
+  display: none;
+  width: 100%;
+  border-bottom: 0.01em solid $secondary-color;
+  @include media(desktop) {
+    width: auto;
+    display: block;
+    position: relative;
+    margin: auto;
+    border: none;
+  }
+  & a:hover,
+  & a:hover::after {
+    transform: scale(101%);
+  }
+}
+
+.active .item {
+  display: block;
+}

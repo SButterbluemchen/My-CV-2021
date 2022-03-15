@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn--empty {
+  color: $primary-color;
+  border: 0.1em solid $primary-color;
+  padding: 0.7em 3em;
+  margin: 1em;
+  display: inline-block;
+  max-width: 18em;
+  text-align: center;
+  &:hover {
+    @include hover($secondary-color, $primary-color);
+  }
+}
+
+.btn--filled {
+  color: $secondary-color;
+  border: 0.1em solid $primary-color;
+  background: $primary-color;
+  padding: 0.7em 3em;
+  margin: 0.5em;
+  display: inline-block;
+  max-width: 18em;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(102%);
+  }
+}
+
+// to the top button
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  transition: 2s ease;
+  bottom: 1.5em; /* Place the button at the bottom of the page */
+  right: 1.5em; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: $primary-color; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0.5em 0.6em; /* Some padding */
+  border: 0.1em solid $secondary-color;
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  img {
+    max-width: 1.5em;
+    &:hover {
+      transform: translateY(-0.2em);
+      transition: 0.5s ease-in-out;
+    }
+  }
+}
