@@ -761,6 +761,17 @@ footer {
   text-align: center;
   padding: 3em 0em;
 }
+.contact-section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-section div figure {
+  width: 5em;
+}
+.contact-section div figure img {
+  width: 100%;
+}
 
 .social-bar ul {
   position: fixed;
@@ -780,7 +791,7 @@ footer {
   width: 2em;
 }
 .social-bar ul li img:hover {
-  transform: scale(102%);
+  transform: scale(103%);
 }
 
 .social-line {

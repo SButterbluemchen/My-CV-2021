@@ -154,6 +154,17 @@
   gap: 10em;
   text-align: center;
   padding: 3em 0em;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    figure {
+      width: 5em;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .social-bar {
@@ -172,7 +183,7 @@
       img {
         width: 2em;
         &:hover {
-          transform: scale(102%);
+          transform: scale(103%);
         }
       }
     }
