@@ -6,14 +6,12 @@
 // -----------------------------------------------------------------------------
 
 nav {
-  background: $secondary-color;
   padding: 0.5em 1.2em;
   margin: 0em -1.5em;
-  position: sticky;
   top: 0;
   z-index: 99;
   a {
-    color: $primary-color;
+    color: $text-color;
     text-decoration: none;
   }
 }
@@ -23,12 +21,24 @@ nav {
   @include flex-wrap(wrap, space-between, center);
   @include media(tablet) {
     justify-content: center;
+    font-size: 1.2em;
   }
   li a {
     display: block;
-    padding: 0.2em 0.5em;
+    padding: 0.2em 1.2em;
+    text-decoration: none;
+    &:hover {
+      transform: scale(102%);
+      color: $primary-color;
+    }
      @include media (screen) {
       padding: 0.2em 0em;
+    }
+    img {
+      width: 7em;
+      @include media(desktop) {
+        width: 2em;
+      }
     }
   }
 }
@@ -52,15 +62,9 @@ nav {
 
 .logo {
   padding: 0em;
-  margin-left: -1em;
+  margin-left: -4em;
   @include media(tablet) {
     flex: 1;
-  }
-  img {
-    width: 7em;
-    @include media(desktop) {
-      width: 9em;
-    }
   }
 }
 

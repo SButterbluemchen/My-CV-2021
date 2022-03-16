@@ -370,7 +370,7 @@ a:hover, a:active, a:focus {
 }
 
 .container {
-  max-width: 95vw;
+  max-width: 90vw;
   margin: auto;
 }
 
@@ -401,19 +401,16 @@ h3, h4 {
 h1, h3, h4 {
   font-weight: 500;
   font-size: 2em;
-  text-transform: uppercase;
 }
 
 h2, h3, h4 {
-  font-weight: 400;
-  font-size: 1.5em;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2em;
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.4em;
-  text-transform: uppercase;
 }
 
 h4 {
@@ -442,16 +439,13 @@ p {
 }
 
 nav {
-  background: #966919;
   padding: 0.5em 1.2em;
   margin: 0em -1.5em;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   z-index: 99;
 }
 nav a {
-  color: #080a80;
+  color: #615e5e;
   text-decoration: none;
 }
 
@@ -464,11 +458,25 @@ nav a {
 @media only screen and (min-width: 600px) {
   .menu {
     justify-content: center;
+    font-size: 1.2em;
   }
 }
 .menu li a {
   display: block;
-  padding: 0.2em 0.5em;
+  padding: 0.2em 1.2em;
+  text-decoration: none;
+}
+.menu li a:hover {
+  transform: scale(102%);
+  color: #bb8a35;
+}
+.menu li a img {
+  width: 7em;
+}
+@media only screen and (min-width: 900px) {
+  .menu li a img {
+    width: 2em;
+  }
 }
 
 .toggle {
@@ -494,19 +502,11 @@ nav a {
 
 .logo {
   padding: 0em;
-  margin-left: -1em;
+  margin-left: -4em;
 }
 @media only screen and (min-width: 600px) {
   .logo {
     flex: 1;
-  }
-}
-.logo img {
-  width: 7em;
-}
-@media only screen and (min-width: 900px) {
-  .logo img {
-    width: 9em;
   }
 }
 
@@ -516,7 +516,7 @@ nav a {
   text-align: left;
   display: none;
   width: 100%;
-  border-bottom: 0.01em solid #966919;
+  border-bottom: 0.01em solid #67ACC3;
 }
 @media only screen and (min-width: 900px) {
   .item {
@@ -535,33 +535,44 @@ nav a {
   display: block;
 }
 
+footer {
+  text-align: center;
+  line-height: 1em;
+  padding: 0.5em 0em;
+}
+
 .btn--empty {
-  color: #080a80;
-  border: 0.1em solid #080a80;
+  color: #bb8a35;
+  border: 0.1em solid #bb8a35;
   padding: 0.7em 3em;
   margin: 1em;
   display: inline-block;
   max-width: 18em;
   text-align: center;
+  border-radius: 0.5em;
+  transition: 0.2s ease-in-out;
 }
 .btn--empty:hover {
-  color: #966919;
-  background: #080a80;
+  color: white;
+  background: #bb8a35;
   transform: scale(102%);
 }
 
 .btn--filled {
-  color: #966919;
-  border: 0.1em solid #080a80;
-  background: #080a80;
+  color: white;
+  border: 0.1em solid #bb8a35;
+  background: #bb8a35;
   padding: 0.7em 3em;
   margin: 0.5em;
   display: inline-block;
   max-width: 18em;
   text-align: center;
+  border-radius: 0.5em;
   transition: 0.2s ease-in-out;
 }
 .btn--filled:hover {
+  color: #bb8a35;
+  background: white;
   transform: scale(102%);
 }
 
@@ -581,15 +592,15 @@ nav a {
   /* Remove borders */
   outline: none;
   /* Remove outline */
-  background-color: #080a80;
+  background-color: white;
   /* Set a background color */
-  color: white;
+  color: #bb8a35;
   /* Text color */
   cursor: pointer;
   /* Add a mouse pointer on hover */
   padding: 0.5em 0.6em;
   /* Some padding */
-  border: 0.1em solid #966919;
+  border: 0.1em solid #bb8a35;
   border-radius: 50%;
   /* Rounded corners */
   font-size: 18px;
@@ -636,19 +647,20 @@ nav a {
 }
 #main .main-competences {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6em;
 }
 #main .main-competences div {
-  width: 100%;
   margin: auto;
   text-align: center;
 }
-#main .main-competences div figure {
-  width: 5em;
+#main .main-competences div:hover {
+  transform: scale(102%);
+  color: #bb8a35;
 }
-#main .main-competences div figure img {
-  width: 100%;
+#main .main-competences div i {
+  font-size: 4em;
 }
 
 #skills article {
@@ -659,6 +671,21 @@ nav a {
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.16);
   border-radius: 1em;
   width: 65%;
+}
+#skills article:nth-child(2) h3 {
+  color: #bb8a35;
+}
+#skills article:nth-child(3) h3 {
+  color: #67ACC3;
+}
+#skills article:nth-child(4) h3 {
+  color: #5BBA47;
+}
+#skills article:nth-child(5) h3 {
+  color: #BA2B97;
+}
+#skills article:nth-child(6) h3 {
+  color: #BA5F2B;
 }
 #skills article ul {
   display: flex;
@@ -680,6 +707,12 @@ nav a {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+#experience article:nth-child(2) h3, #experience article:nth-child(3) h3, #experience article:nth-child(7) h3, #experience article:nth-child(8) h3 {
+  color: #bb8a35;
+}
+#experience article:nth-child(4) h3, #experience article:nth-child(5) h3, #experience article:nth-child(6) h3 {
+  color: #67ACC3;
+}
 #experience article figure {
   width: 3em;
   height: 3em;
@@ -694,12 +727,64 @@ nav a {
   justify-content: center;
   margin-top: 1em;
 }
-.project-section figure {
+.project-section div {
+  margin: 1em 0em;
+  transition: 0.2s ease-in-out;
+}
+.project-section div > div {
+  margin-left: 3em;
+}
+.project-section div > div a {
+  margin-left: 0;
+}
+.project-section div figure {
   width: 35em;
   height: 17em;
+  filter: grayscale(90%);
+  transition: 0.2s ease-in-out;
 }
-.project-section figure img {
+.project-section div figure:hover {
+  transform: scale(102%);
+}
+.project-section div figure img {
   width: 100%;
   margin: auto;
   max-height: 100%;
+  border-radius: 0.3em;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10em;
+  text-align: center;
+  padding: 3em 0em;
+}
+
+.social-bar ul {
+  position: fixed;
+  width: 10em;
+  bottom: -1em;
+  left: -3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+}
+.social-bar ul li {
+  list-style-type: none;
+  padding: 0.5em 0em;
+}
+.social-bar ul li img {
+  width: 2em;
+}
+.social-bar ul li img:hover {
+  transform: scale(102%);
+}
+
+.social-line {
+  height: 10em;
+  width: 0.2em;
+  background-color: #bb8a35;
 }/*# sourceMappingURL=main.css.map */

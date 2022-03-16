@@ -11,19 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/815f638932.js" crossorigin="anonymous"></script>
+  </head>
 <body>
   <section class="container">
     <!-- NAVIGATON BAR -->
     <nav>
       <ul class="menu">
-        <li class="logo"><a href="index.html" class="active"><img src="img/logo_cos_white_2lines.png" alt="Home Logo CV Sina Brauch"></a></li>
+        <li class="logo"><a href="index.html" class="active">Accueil</a></li>
         <li><a href="#about" class="item">Compétences & parcours</a></li>
         <li><a href="#projects" class="item">Réalisations</a></li>
         <li><a href="#conctact" class="item">Contact</a></li>
-        <li class="logo"><a href="index.html" class="active"><img src="img/logo_cos_white_2lines.png" alt="Download CV Sina Brauch"></a></li>
-        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
       </ul>
     </nav>
     <!-- UP BUTTON -->
@@ -41,58 +40,27 @@
       </article>
       <article class="main-competences">
         <div>
-          <figure>
-            <img src="img/light-bulb.png">
-          </figure>
+          <i class="fas fa-code"></i>
           <p>front-end</p>
         </div>
         <div>
-          <figure>
-            <img src="img/light-bulb.png">
-          </figure>
+          <i class="fas fa-mobile-alt"></i>
           <p>mobile</p>
         </div>
         <div>
-          <figure>
-            <img src="img/light-bulb.png">
-          </figure>
+          <i class="fas fa-pencil-ruler"></i>
           <p>web-design</p>
         </div>
         <div>
-          <figure>
-            <img src="img/light-bulb.png">
-          </figure>
+          <i class="fas fa-database"></i>
           <p>marketing</p>
         </div>
         <div>
-          <figure>
-            <img src="img/light-bulb.png">
-          </figure>
+          <i class="fas fa-globe"></i>
           <p>allemand</p>
         </div>
       </article>
     </main>
-    <!-- About
-    <section id="about">
-        <div id="social_about">
-          <a href="https://www.linkedin.com/in/sina-brauch-6500a2aa/" target="_blank"><img src="img/linkedin.png" alt="Sina Brauch linkedin"></a>
-          <a href="https://github.com/SButterbluemchen" target="_blank"><img src="img/github.png" alt="Sina Brauch Github Account"></a>
-        </div>
-        <div>
-          <a class="view-button" href="#resume">View</a>
-          <a class="download-button" href="LINK" target="_blank">Download CV</a>
-        </div>
-        <article>
-          <div>
-            <img src="img/like.png" alt="Interests">
-            <h3>Interests</h3>
-          </div>
-          <div>
-            <img src="img/Sina_Travel.png" alt="Travelling">
-            <img src="img/Sina_Sport.png" alt="Sports">
-          </div>
-        </article>
-    </section>-->
     <!-- Competence Section -->
     <section id="skills">
       <h2>Compétences</h2>
@@ -252,6 +220,28 @@
       <section class="project-section">
         <div>
           <figure>
+            <img src="img/cos-lille.jpg" alt="site web docteur">
+          </figure>
+          <div>
+            <h4>Site web vitrine médecin</h4>
+            <p>TECHNOS</p>
+            <a class="btn--filled" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">Live demo</a>
+            <a class="btn--empty" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <img src="img/Corona_day_counter.jpg" alt="site web baby pics">
+          </figure>
+          <div>
+            <h4>Site web vitrine photographie</h4>
+            <p>TECHNOS</p>
+            <a class="btn--filled" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">Live demo</a>
+            <a class="btn--empty" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div>
+          <figure>
             <img src="img/Advent_calendar.jpg" alt="advent calendar projet">
           </figure>
           <div>
@@ -266,7 +256,7 @@
             <img src="img/Corona_day_counter.jpg" alt="corona day counter projet">
           </figure>
           <div>
-            <h4>Corona day counter</h4>
+            <h4>Compteur corona</h4>
             <p>TECHNOS</p>
             <a class="btn--filled" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">Live demo</a>
             <a class="btn--empty" href="https://christine-advent-calendar.herokuapp.com/#" target="_blank">GitHub</a>
@@ -277,34 +267,36 @@
     <!-- Contact Section -->
     <section id="contact">
       <h2>Let's get in touch</h2>
-    <!-- Contact Form -->
-    <div class="container">
-      <form action="action_page.php">
-        <label for="subject">Your message:</label>
-        <textarea id="subject" name="subject" placeholder="Hi Sina, I'm contacting you because ..." style="height:200px"></textarea>
-        <input type="submit" value="Send">
-      </form>
-    </div>
-    <!-- Social media -->
-    <div id="social_contact">
-      <a href="https://www.linkedin.com/in/sina-brauch-6500a2aa/" target="_blank"><img src="img/linkedin.png" alt="Sina Brauch linkedin"></a>
-      <a href="https://github.com/SButterbluemchen" target="_blank"><img src="img/github.png" alt="Sina Brauch Github Account"></a>
-    </div>
-    <a class="top-button" href="#about">Top</a>
-    </section>
-    <!-- Footer -->
-    <footer>
+    <article class="contact-section">
       <div>
-        <p>&copy; Copyright 2021 Sina Brauch</p>
+        <img src="img/email-logo.png" alt="email">
+        <p>sina.brauch@gmail.com</p>
       </div>
       <div>
-        <h5>Call</h5>
+        <img src="img/light-bulb.png" alt="email">
         <p>+33628368546</p>
       </div>
       <div>
-        <h5>Write</h5>
-        <p>sina.brauch@gmail.com</p>
+        <img src="img/light-bulb.png" alt="email">
+        <p>Vous souhaitez me rencontrer ? <br>
+          Je suis disponible à Lille.
+        </p>
       </div>
+    </article>
+    </section>
+    <!-- Social media bar -->
+    <section class="social-bar">
+      <ul>
+        <li><a href="https://github.com/SButterbluemchen" target="_blank"><img src="img/github.png" alt="github Sina Brauch"></a></li>
+        <li><a href="https://www.linkedin.com/in/sina-brauch-6500a2aa/" target="_blank"><img src="img/linkedin.png" alt="Linkedin Sina Brauch"></a></li>
+        <li><a href="mailto:sina.brauch@gmail.com"><img src="img/email-logo.png" alt="Email Sina Brauch"></a></li>
+        <li class="social-line"></li>
+      </ul>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>Fait avec ♥ by Sina Brauch © 2021</p>
+        <p>Tout droit réservé</p>
     </footer>
     <script src="js/main.js"></script>
   </section>

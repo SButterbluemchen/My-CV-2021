@@ -20,15 +20,15 @@ h3, h4 {
 }
 
 h1 {
-  @include headingstyle(bold, h1, uppercase);
+  @include headingstyle(bold, h1);
 }
 
 h2 {
-  @include headingstyle(normal, h2, uppercase);
+  @include headingstyle(bold, h2);
 }
 
 h3 {
-  @include headingstyle(normal, h3, uppercase);
+  @include headingstyle(bold, h3);
 }
 
 h4 {

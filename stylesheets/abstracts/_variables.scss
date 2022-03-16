@@ -9,7 +9,7 @@ $heading-font-stack: 'Poppins', sans-serif;
 // font size
 $fontsizes: (
     "h1": 2em,
-    "h2": 1.5em,
+    "h2": 2em,
     "h3": 1.4em,
     "h4": 1.2em,
     "h5": 1.1em,
@@ -25,7 +25,10 @@ $fontweights: (
   );
 
 // colors
-$primary-color: #080a80;
-$secondary-color: #966919;
+$primary-color: #bb8a35;
+$secondary-color: #67ACC3;
+$tertiary-color: #5BBA47;
+$fourth-color: #BA2B97;
+$fifth-color: #BA5F2B;
 $text-color: #615e5e;
 $background-color: #fafafa;
