@@ -81,5 +81,79 @@ function closeSubmenu(e) {
     menu.querySelector('.submenu-active').classList.remove('submenu-active');
   }
 }
-
 document.addEventListener('click', closeSubmenu, false);
+
+// -----------------------------------------------------------------------------
+// TYPEWRITER
+// -----------------------------------------------------------------------------
+/*window.addEventListener('DOMContentLoaded', () => {
+	let toWrite = ['je m\'appelle Sina !', 'je suis développeuse front-end.'];
+
+    let textNode, elm, textWrapper = document.getElementById('typewriter');
+    
+    function writeText(text) {
+      while(textWrapper.hasChildNodes()) {
+        textWrapper.removeChild(textWrapper.lastChild);
+      }
+      [...text].map(
+        (letter, i) => (
+          setTimeout(function(){
+            textNode = document.createTextNode(letter);
+            elm = document.createElement('span');
+            elm.appendChild(textNode);           
+            textWrapper.appendChild(elm);
+          }, 50*i)
+          )
+        )
+    }
+  
+    writeText(toWrite[0]);
+    let current = 1
+  
+    setInterval(function(){
+      writeText(toWrite[current])
+      current++;
+      if(current >= toWrite.length) {
+        current = 0;
+      }
+    }, 2000)
+  })()*/
+
+window.addEventListener('DOMContentLoaded', () => {
+      const delay = 20;
+  let toWrite = ['je m\'appelle Sina !', 'je suis développeuse front-end.'];
+
+  let textNode, elm, textWrapper = document.getElementById('typewriter');
+
+  function writeText(text) {
+    const textToDeleteLength = textWrapper.children.length;
+
+    for(let i = 0; i < textToDeleteLength; i++) {
+      setTimeout(function(){
+        textWrapper.removeChild(textWrapper.lastChild)
+      }, delay * i)
+    }
+
+    [...text].map(
+      (letter, i) => (
+        setTimeout(function(){
+          textNode = document.createTextNode(letter);
+          elm = document.createElement('span');
+          elm.appendChild(textNode);           
+          textWrapper.appendChild(elm);
+        }, delay * (i + textToDeleteLength))
+        )
+      )
+  }
+  
+  writeText(toWrite[0]);
+  let current = 1
+
+  setInterval(function(){
+    writeText(toWrite[current])
+    current++;
+    if(current >= toWrite.length) {
+      current = 0;
+    }
+  }, 2500)
+})();

@@ -21,10 +21,11 @@
       }
     }
     div {
-      max-width: 50%;
+      max-width: 55%;
       margin-bottom: 5em;
     }
   }
+
   .main-competences {
     @include flex-wrap(wrap, space-between);
     gap: 6em;
@@ -119,6 +120,7 @@
     margin-top: 2em;
     padding: 2em 5em;
     box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
+    background-color: $background-color-second;
     border-radius: 1em;
     width: 65%;
     &:nth-child(2),
@@ -162,8 +164,8 @@
     figure {
       width: 35em;
       height: 17em;
-      filter: grayscale(90%);
       transition: 0.2s ease-in-out;
+      filter: grayscale(90%);
       &:hover {
         transform: scale(102%);
       }

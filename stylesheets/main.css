@@ -361,11 +361,11 @@ html {
  * Basic styles for links
  */
 a {
-  color: #615e5e;
+  color: #4d4a4a;
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: #615e5e;
+  color: #4d4a4a;
   text-decoration: underline;
 }
 
@@ -382,7 +382,7 @@ section, main {
  * Basic typography style for copy text
  */
 body {
-  color: #615e5e;
+  color: #4d4a4a;
   font: normal 100%/1.4em "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -419,13 +419,12 @@ h4 {
 }
 
 h5 {
-  font-weight: 400;
-  font-size: 1.1em;
+  font-weight: 200;
+  font-size: 1em;
 }
 
 h5 {
-  margin: 0.2em;
-  text-align: center;
+  margin: -0.5em 0em 0.5em 0em;
 }
 
 p {
@@ -445,7 +444,7 @@ nav {
   z-index: 99;
 }
 nav a {
-  color: #615e5e;
+  color: #4d4a4a;
   text-decoration: none;
 }
 
@@ -642,7 +641,7 @@ footer {
   border-radius: 100%;
 }
 #main .main-intro div {
-  max-width: 50%;
+  max-width: 55%;
   margin-bottom: 5em;
 }
 #main .main-competences {
@@ -750,6 +749,7 @@ footer {
   margin-top: 2em;
   padding: 2em 5em;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.16);
+  background-color: #EBEBEB;
   border-radius: 1em;
   width: 65%;
   display: flex;
@@ -789,8 +789,8 @@ footer {
 .project-section div figure {
   width: 35em;
   height: 17em;
-  filter: grayscale(90%);
   transition: 0.2s ease-in-out;
+  filter: grayscale(90%);
 }
 .project-section div figure:hover {
   transform: scale(102%);
