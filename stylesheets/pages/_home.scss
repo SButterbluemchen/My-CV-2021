@@ -43,45 +43,73 @@
 }
 
 #skills {
+  background-color: $background-color-second;
+  padding: 3em 0em 4em;
+  margin: 0 -5em;
   article {
-    width: 250em;
-    height: 15em;
-    margin: auto;
-    padding: 2em 5em;
-    box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
-    border-radius: 1em;
-    width: 65%;
-    &:nth-child(2) {
-      h3 {
-        color: $primary-color;
+    @include flex-wrap(wrap, center);
+    align-items: center;
+    .skills-content {
+      background: white;
+      width: 250em;
+      height: 15em;
+      margin-top: 2em;
+      padding: 2em 5em;
+      box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
+      border-radius: 1em;
+      width: 60%;
+      ul {
+        @include flex-wrap(wrap, flex-start);
+        li {
+          width: 50%;
+        }
       }
     }
-    &:nth-child(3) {
-      h3 {
-        color: $secondary-color;
+    div {
+      transition: 0.2s ease-in-out;
+      i {
+        font-size: 6em;
+        padding: 0em 1em;
+        &:hover {
+          animation: bounce 0.25s ease infinite alternate;
+          @keyframes bounce{
+            from {transform: translateY(0);}
+            to   {transform: translateY(-0.2em);}
+       }
+        }
       }
     }
-    &:nth-child(4) {
-      h3 {
-        color: $tertiary-color;
-      }
-    }
-    &:nth-child(5) {
-      h3 {
-        color: $fourth-color;
-      }
-    }
-    &:nth-child(6) {
-      h3 {
-        color: $fifth-color;
-      }
-    }
-    ul {
-      @include flex-wrap(wrap, flex-start);
-      li {
-        width: 50%;
-      }
-    }
+  }
+}
+
+.front-end {
+  h3,
+  i {
+    color: $primary-color;
+  }
+}
+.web-design {
+  h3,
+  i {
+    color: $secondary-color;
+  }
+}
+.cms {
+  h3,
+  i {
+    color: $tertiary-color;
+  }
+}
+.languages {
+  h3,
+  i {
+    color: $fourth-color;
+  }
+}
+.work-environment {
+  h3,
+  i {
+    color: $fifth-color;
   }
 }
 
@@ -147,6 +175,12 @@
       }
     }
   }
+}
+
+#contact {
+  background-color: $background-color-second;
+  margin: 0 -5em;
+  padding: 2em 0em;
 }
 
 .contact-section {

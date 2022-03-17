@@ -388,7 +388,7 @@ body {
 
 h1, h3, h4, h2 {
   font-family: "Poppins", sans-serif;
-  color: #615e5e;
+  color: #292929;
   line-height: 1.2;
   text-align: center;
   margin: 0.5em 0em;
@@ -592,7 +592,7 @@ footer {
   /* Remove borders */
   outline: none;
   /* Remove outline */
-  background-color: white;
+  background-color: transparent;
   /* Set a background color */
   color: #bb8a35;
   /* Text color */
@@ -663,37 +663,86 @@ footer {
   font-size: 4em;
 }
 
+#skills {
+  background-color: #EBEBEB;
+  padding: 3em 0em 4em;
+  margin: 0 -5em;
+}
 #skills article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#skills article .skills-content {
+  background: white;
   width: 250em;
   height: 15em;
-  margin: auto;
+  margin-top: 2em;
   padding: 2em 5em;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.16);
   border-radius: 1em;
-  width: 65%;
+  width: 60%;
 }
-#skills article:nth-child(2) h3 {
-  color: #bb8a35;
-}
-#skills article:nth-child(3) h3 {
-  color: #67ACC3;
-}
-#skills article:nth-child(4) h3 {
-  color: #5BBA47;
-}
-#skills article:nth-child(5) h3 {
-  color: #BA2B97;
-}
-#skills article:nth-child(6) h3 {
-  color: #BA5F2B;
-}
-#skills article ul {
+#skills article .skills-content ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-#skills article ul li {
+#skills article .skills-content ul li {
   width: 50%;
+}
+#skills article div {
+  transition: 0.2s ease-in-out;
+}
+#skills article div i {
+  font-size: 6em;
+  padding: 0em 1em;
+}
+#skills article div i:hover {
+  -webkit-animation: bounce 0.25s ease infinite alternate;
+          animation: bounce 0.25s ease infinite alternate;
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-0.2em);
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-0.2em);
+  }
+}
+
+.front-end h3,
+.front-end i {
+  color: #bb8a35;
+}
+
+.web-design h3,
+.web-design i {
+  color: #67ACC3;
+}
+
+.cms h3,
+.cms i {
+  color: #5BBA47;
+}
+
+.languages h3,
+.languages i {
+  color: #BA2B97;
+}
+
+.work-environment h3,
+.work-environment i {
+  color: #BA5F2B;
 }
 
 #experience article {
@@ -751,6 +800,12 @@ footer {
   margin: auto;
   max-height: 100%;
   border-radius: 0.3em;
+}
+
+#contact {
+  background-color: #EBEBEB;
+  margin: 0 -5em;
+  padding: 2em 0em;
 }
 
 .contact-section {
