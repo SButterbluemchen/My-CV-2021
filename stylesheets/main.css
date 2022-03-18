@@ -973,7 +973,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10%;
+  gap: 3em;
   text-align: center;
   padding: 3em 0em;
 }
@@ -984,10 +984,12 @@ footer {
 }
 .contact-section div figure {
   width: 3em;
+  margin: 0em;
 }
 @media only screen and (min-width: 600px) {
   .contact-section div figure {
     width: 5em;
+    margin: 0em 6em;
   }
 }
 .contact-section div figure img {

@@ -266,7 +266,7 @@
 
 .contact-section {
   @include flex-wrap(wrap, center);
-  gap: 10%;
+  gap: 3em;
   text-align: center;
   padding: 3em 0em;
   div {
@@ -275,8 +275,10 @@
     align-items: center;
     figure {
       width: 3em;
+      margin: 0em;
       @include media(tablet) {
         width: 5em;
+        margin: 0em 6em;
       }
       img {
         width: 100%;
