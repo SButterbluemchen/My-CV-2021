@@ -21,22 +21,34 @@ h3, h4 {
 
 h1 {
   @include headingstyle(bold, h1);
+  @include media(mobile) {
+    font-size: map-get($map: $fontsizes, $key: h1) * 0.8;
+  }
 }
 
 h2 {
   @include headingstyle(bold, h2);
+  @include media(mobile) {
+    font-size: map-get($map: $fontsizes, $key: h2) * 0.8;
+  }
 }
 
 h3 {
   @include headingstyle(bold, h3);
+  @include media(mobile) {
+    font-size: map-get($map: $fontsizes, $key: h3) * 0.8;
+  }
 }
 
 h4 {
-  @include headingstyle(normal, h4)
+  @include headingstyle(normal, h4);
+  @include media(mobile) {
+    font-size: map-get($map: $fontsizes, $key: h4) * 0.8;
+  }
 }
 
 h5 {
-  @include headingstyle(light, h5)
+  @include headingstyle(light, h5);
 }
 
 h5 {

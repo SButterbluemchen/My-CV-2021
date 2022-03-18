@@ -5,14 +5,20 @@
 //Get the button:
 mybutton = document.getElementById("myBtn");
 
+// Deactivate typewriter when not visible
+//Get the h1:
+let typewriter = document.getElementById("typewriter");
+
 // When the user scrolls down 250px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 250) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 350) {
     mybutton.style.display = "block";
+    typewriter.style.display = "none";
   } else {
     mybutton.style.display = "none";
+    typewriter.style.display = "inline-block";
   }
 }
 // When the user clicks on the button, scroll to the top of the document
@@ -76,13 +82,15 @@ toggle.addEventListener('click', toggleMenu, false);
     }, 2000)
   })()*/
 
-window.addEventListener('DOMContentLoaded', () => {
-      const delay = 20;
-  let toWrite = ['je m\'appelle Sina !', 'je suis développeuse front-end.'];
+document.addEventListener('DOMContentLoaded', () => {
+  // time period for writting the text
+  const delay = 20;
+  let toWrite = ['je m\'appelle Sina !', 'je suis développeuse front-end.', 'je parle allemand.'];
 
   let textNode, elm, textWrapper = document.getElementById('typewriter');
 
   function writeText(text) {
+    // deleting the text in typewriter method
     const textToDeleteLength = textWrapper.children.length;
 
     for(let i = 0; i < textToDeleteLength; i++) {
@@ -90,7 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
         textWrapper.removeChild(textWrapper.lastChild)
       }, delay * i)
     }
-
+    // adding a letter one after another
     [...text].map(
       (letter, i) => (
         setTimeout(function(){
@@ -105,7 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
   
   writeText(toWrite[0]);
   let current = 1
-
+  // change word after 2.5 sec
   setInterval(function(){
     writeText(toWrite[current])
     current++;
@@ -113,4 +121,4 @@ window.addEventListener('DOMContentLoaded', () => {
       current = 0;
     }
   }, 2500)
-})();
+});

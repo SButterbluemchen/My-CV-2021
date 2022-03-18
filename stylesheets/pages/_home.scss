@@ -2,7 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 #main {
-  text-align: left;  
+  text-align: left; 
   @include flex-wrap(wrap, center);
   .main-intro {
     @include flex-wrap(wrap, center);
@@ -21,7 +21,7 @@
       }
     }
     div {
-      max-width: 90%;
+      max-width: 100%;
       @include media(tablet) {
         max-width: 55%;
       }
@@ -30,20 +30,32 @@
   }
 
   .main-competences {
-    @include flex-wrap(wrap, space-between);
-    gap: 2em;
+    @include flex-wrap(wrap, flex-start);
+    gap: 1.2em;
     @include media(tablet) {
-      gap: 6em;
+      gap: 5em;
     }
     div {
       margin: auto;
       text-align: center;
+      margin-left: 0em;
+      margin-right: 0em;
+      margin-top: 1em;
+      p {
+        font-size: 0.7em;
+        @include media(tablet) {
+          font-size: map-get($map: $fontsizes, $key: p)
+        }
+      }
       &:hover {
         transform: scale(102%);
         color: $primary-color;
       }
       i {
-        font-size: 3em;
+        font-size: 1.5em;
+        @include media(tablet) {
+          font-size: 3em;
+        }
       }
     }
   }
@@ -206,6 +218,10 @@
   bottom: 0;
   left: 10em;
   z-index: -1;
+}
+
+#projects {
+  margin-top: 6em;
 }
 
 .project-section {

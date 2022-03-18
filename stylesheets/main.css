@@ -377,7 +377,12 @@ a:hover, a:active, a:focus {
 }
 
 section, main {
-  margin: 8em 0em;
+  margin: 3em 0em;
+}
+@media only screen and (min-width: 600px) {
+  section, main {
+    margin: 8em 0em;
+  }
 }
 
 /**
@@ -402,22 +407,42 @@ h3, h4 {
 
 h1, h3, h4 {
   font-weight: 500;
-  font-size: 2em;
+  font-size: 1.8em;
+}
+@media only screen and (max-width: 599px) {
+  h1, h3, h4 {
+    font-size: 1.44em;
+  }
 }
 
 h2, h3, h4 {
   font-weight: 500;
-  font-size: 2em;
+  font-size: 1.8em;
+}
+@media only screen and (max-width: 599px) {
+  h2, h3, h4 {
+    font-size: 1.44em;
+  }
 }
 
 h3 {
   font-weight: 500;
   font-size: 1.4em;
 }
+@media only screen and (max-width: 599px) {
+  h3 {
+    font-size: 1.12em;
+  }
+}
 
 h4 {
   font-weight: 400;
   font-size: 1.2em;
+}
+@media only screen and (max-width: 599px) {
+  h4 {
+    font-size: 0.96em;
+  }
 }
 
 h5 {
@@ -677,7 +702,7 @@ footer {
   border-radius: 100%;
 }
 #main .main-intro div {
-  max-width: 90%;
+  max-width: 100%;
   margin-bottom: 5em;
 }
 @media only screen and (min-width: 600px) {
@@ -688,24 +713,40 @@ footer {
 #main .main-competences {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2em;
+  justify-content: flex-start;
+  gap: 1.2em;
 }
 @media only screen and (min-width: 600px) {
   #main .main-competences {
-    gap: 6em;
+    gap: 5em;
   }
 }
 #main .main-competences div {
   margin: auto;
   text-align: center;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: 1em;
+}
+#main .main-competences div p {
+  font-size: 0.7em;
+}
+@media only screen and (min-width: 600px) {
+  #main .main-competences div p {
+    font-size: 1em;
+  }
 }
 #main .main-competences div:hover {
   transform: scale(102%);
   color: #bb8a35;
 }
 #main .main-competences div i {
-  font-size: 3em;
+  font-size: 1.5em;
+}
+@media only screen and (min-width: 600px) {
+  #main .main-competences div i {
+    font-size: 3em;
+  }
 }
 
 #skills {
@@ -878,6 +919,10 @@ footer {
   bottom: 0;
   left: 10em;
   z-index: -1;
+}
+
+#projects {
+  margin-top: 6em;
 }
 
 .project-section {
