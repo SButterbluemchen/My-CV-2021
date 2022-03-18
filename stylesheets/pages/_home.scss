@@ -2,7 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 #main {
-  text-align: left;
+  text-align: left;  
   @include flex-wrap(wrap, center);
   .main-intro {
     @include flex-wrap(wrap, center);
@@ -21,14 +21,20 @@
       }
     }
     div {
-      max-width: 55%;
+      max-width: 90%;
+      @include media(tablet) {
+        max-width: 55%;
+      }
       margin-bottom: 5em;
     }
   }
 
   .main-competences {
     @include flex-wrap(wrap, space-between);
-    gap: 6em;
+    gap: 2em;
+    @include media(tablet) {
+      gap: 6em;
+    }
     div {
       margin: auto;
       text-align: center;
@@ -37,7 +43,7 @@
         color: $primary-color;
       }
       i {
-        font-size: 4em;
+        font-size: 3em;
       }
     }
   }
@@ -45,38 +51,48 @@
 
 #skills {
   background-color: $background-color-second;
-  padding: 3em 0em 4em;
-  margin: 0 -5em;
+  padding: 3em 0em 4em 0em;
+  margin: 0 -2em;
   article {
     @include flex-wrap(wrap, center);
     align-items: center;
     .skills-content {
       background: white;
-      width: 250em;
-      height: 15em;
       margin-top: 2em;
-      padding: 2em 5em;
+      padding: 2em;
       box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
       border-radius: 1em;
-      width: 60%;
+      width: 90%;
+      @include media(tablet) {
+        width: 60%;
+      }
       ul {
         @include flex-wrap(wrap, flex-start);
+        padding-left: 1.4em;
+        column-gap: 1em;
         li {
-          width: 50%;
+          width: 40%;
         }
       }
     }
-    div {
+    .skills-picto {
       transition: 0.2s ease-in-out;
+      @include media(mobile) {
+        display: none;
+      }
       i {
         font-size: 6em;
         padding: 0em 1em;
         &:hover {
           animation: bounce 0.25s ease infinite alternate;
-          @keyframes bounce{
-            from {transform: translateY(0);}
-            to   {transform: translateY(-0.2em);}
-       }
+          @keyframes bounce {
+            from {
+              transform: translateY(0);
+            }
+            to {
+              transform: translateY(-0.2em);
+            }
+          }
         }
       }
     }
@@ -115,14 +131,20 @@
 }
 
 #experience {
+  position: relative;
   article {
+    position: relative;
     margin: auto;
-    margin-top: 2em;
-    padding: 2em 5em;
+    margin-top: 3em;
+    padding: 2em;
     box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
     background-color: $background-color-second;
     border-radius: 1em;
-    width: 65%;
+    width: 100%;
+    @include media(desktop) {
+      width: 65%;
+      padding: 2em 5em;
+    }
     &:nth-child(2),
     &:nth-child(3),
     &:nth-child(7),
@@ -138,7 +160,10 @@
         color: $secondary-color;
       }
     }
-    @include flex-wrap(wrap, flex-start);
+    @include flex-wrap(wrap, center);
+    @include media(tablet) {
+      @include flex-wrap(wrap, flex-start);
+    }
     figure {
       width: 3em;
       height: 3em;
@@ -146,12 +171,46 @@
         width: 100%;
       }
     }
+    ul {
+      padding-left: 1.4em;
+    }
+    h3, h4, h5 {
+      text-align: center;
+      @include media(tablet) {
+        text-align: left;
+      }
+    }
+    @include media(desktop) {
+      &::after {
+        content: "";
+        height: 0;
+        position: absolute;
+        top: calc(50% - 3em);
+        width: 0;
+        z-index: 1;
+        left: -10px;
+        border: medium solid #ebebeb;
+        border-width: 3em 3em 3em 0;
+        border-color: transparent #ebebeb transparent transparent;
+      }
+    }
   }
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 0.2em;
+  background-color: $background-color-second;
+  top: 5em;
+  bottom: 0;
+  left: 10em;
+  z-index: -1;
 }
 
 .project-section {
   @include flex-wrap(wrap, center);
-  margin-top: 1em;
+  margin: 1em -2em;
   div {
     margin: 1em 0em;
     transition: 0.2s ease-in-out;
@@ -162,8 +221,12 @@
       }
     }
     figure {
-      width: 35em;
-      height: 17em;
+      @include media(tablet) {
+        width: 35em;
+        height: 17em;
+      }
+      width: 18em;
+      height: 8em;
       transition: 0.2s ease-in-out;
       filter: grayscale(90%);
       &:hover {
@@ -181,13 +244,13 @@
 
 #contact {
   background-color: $background-color-second;
-  margin: 0 -5em;
+  margin: 0 -2em;
   padding: 2em 0em;
 }
 
 .contact-section {
   @include flex-wrap(wrap, center);
-  gap: 10em;
+  gap: 10%;
   text-align: center;
   padding: 3em 0em;
   div {
@@ -195,7 +258,10 @@
     flex-direction: column;
     align-items: center;
     figure {
-      width: 5em;
+      width: 3em;
+      @include media(tablet) {
+        width: 5em;
+      }
       img {
         width: 100%;
       }
@@ -204,6 +270,10 @@
 }
 
 .social-bar {
+  display: none;
+  @include media(tablet) {
+    display: unset;
+  }
   ul {
     position: fixed;
     width: 10em;

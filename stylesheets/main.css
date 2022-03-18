@@ -343,6 +343,7 @@ template {
  */
 html {
   box-sizing: border-box;
+  background-color: #fafafa;
 }
 
 /**
@@ -370,8 +371,9 @@ a:hover, a:active, a:focus {
 }
 
 .container {
-  max-width: 90vw;
   margin: auto;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 section, main {
@@ -438,10 +440,22 @@ p {
 }
 
 nav {
-  padding: 0.5em 1.2em;
-  margin: 0em -1.5em;
+  padding: 0em 1.2em;
+  margin: 0em -2em;
   top: 0;
   z-index: 99;
+}
+@media only screen and (max-width: 599px) {
+  nav {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #fafafa;
+  }
+}
+@media only screen and (min-width: 600px) {
+  nav {
+    margin: 0em 2em;
+  }
 }
 nav a {
   color: #4d4a4a;
@@ -462,7 +476,7 @@ nav a {
 }
 .menu li a {
   display: block;
-  padding: 0.2em 1.2em;
+  padding: 0.5em;
   text-decoration: none;
 }
 .menu li a:hover {
@@ -482,9 +496,10 @@ nav a {
   order: 1;
   font-size: 2em;
   margin-top: 0.1em;
+  margin-left: -1.5em;
 }
-.toggle img {
-  max-width: 1.3em;
+.toggle i {
+  color: #bb8a35;
 }
 @media only screen and (min-width: 600px) {
   .toggle {
@@ -503,6 +518,11 @@ nav a {
   padding: 0em;
   margin-left: -4em;
 }
+@media only screen and (max-width: 599px) {
+  .logo {
+    display: none;
+  }
+}
 @media only screen and (min-width: 600px) {
   .logo {
     flex: 1;
@@ -515,7 +535,7 @@ nav a {
   text-align: left;
   display: none;
   width: 100%;
-  border-bottom: 0.01em solid #67ACC3;
+  border-bottom: 0.01em solid #bb8a35;
 }
 @media only screen and (min-width: 900px) {
   .item {
@@ -534,6 +554,10 @@ nav a {
   display: block;
 }
 
+ul.menu.active {
+  padding-left: -2em;
+}
+
 footer {
   text-align: center;
   line-height: 1em;
@@ -543,10 +567,10 @@ footer {
 .btn--empty {
   color: #bb8a35;
   border: 0.1em solid #bb8a35;
-  padding: 0.7em 3em;
+  padding: 0.5em;
   margin: 1em;
   display: inline-block;
-  max-width: 18em;
+  width: 7em;
   text-align: center;
   border-radius: 0.5em;
   transition: 0.2s ease-in-out;
@@ -556,15 +580,21 @@ footer {
   background: #bb8a35;
   transform: scale(102%);
 }
+@media only screen and (min-width: 900px) {
+  .btn--empty {
+    width: 10em;
+    padding: 0.5em 1.5em;
+  }
+}
 
 .btn--filled {
   color: white;
   border: 0.1em solid #bb8a35;
   background: #bb8a35;
-  padding: 0.7em 3em;
-  margin: 0.5em;
+  padding: 0.5em;
+  margin: 0.2em 0.5em;
   display: inline-block;
-  max-width: 18em;
+  width: 7em;
   text-align: center;
   border-radius: 0.5em;
   transition: 0.2s ease-in-out;
@@ -573,6 +603,12 @@ footer {
   color: #bb8a35;
   background: white;
   transform: scale(102%);
+}
+@media only screen and (min-width: 900px) {
+  .btn--filled {
+    width: 10em;
+    padding: 0.5em 1.5em;
+  }
 }
 
 #myBtn {
@@ -641,14 +677,24 @@ footer {
   border-radius: 100%;
 }
 #main .main-intro div {
-  max-width: 55%;
+  max-width: 90%;
   margin-bottom: 5em;
+}
+@media only screen and (min-width: 600px) {
+  #main .main-intro div {
+    max-width: 55%;
+  }
 }
 #main .main-competences {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 6em;
+  gap: 2em;
+}
+@media only screen and (min-width: 600px) {
+  #main .main-competences {
+    gap: 6em;
+  }
 }
 #main .main-competences div {
   margin: auto;
@@ -659,13 +705,13 @@ footer {
   color: #bb8a35;
 }
 #main .main-competences div i {
-  font-size: 4em;
+  font-size: 3em;
 }
 
 #skills {
   background-color: #EBEBEB;
-  padding: 3em 0em 4em;
-  margin: 0 -5em;
+  padding: 3em 0em 4em 0em;
+  margin: 0 -2em;
 }
 #skills article {
   display: flex;
@@ -675,30 +721,41 @@ footer {
 }
 #skills article .skills-content {
   background: white;
-  width: 250em;
-  height: 15em;
   margin-top: 2em;
-  padding: 2em 5em;
+  padding: 2em;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.16);
   border-radius: 1em;
-  width: 60%;
+  width: 90%;
+}
+@media only screen and (min-width: 600px) {
+  #skills article .skills-content {
+    width: 60%;
+  }
 }
 #skills article .skills-content ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding-left: 1.4em;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
 }
 #skills article .skills-content ul li {
-  width: 50%;
+  width: 40%;
 }
-#skills article div {
+#skills article .skills-picto {
   transition: 0.2s ease-in-out;
 }
-#skills article div i {
+@media only screen and (max-width: 599px) {
+  #skills article .skills-picto {
+    display: none;
+  }
+}
+#skills article .skills-picto i {
   font-size: 6em;
   padding: 0em 1em;
 }
-#skills article div i:hover {
+#skills article .skills-picto i:hover {
   -webkit-animation: bounce 0.25s ease infinite alternate;
           animation: bounce 0.25s ease infinite alternate;
 }
@@ -744,23 +801,40 @@ footer {
   color: #BA5F2B;
 }
 
+#experience {
+  position: relative;
+}
 #experience article {
+  position: relative;
   margin: auto;
-  margin-top: 2em;
-  padding: 2em 5em;
+  margin-top: 3em;
+  padding: 2em;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.16);
   background-color: #EBEBEB;
   border-radius: 1em;
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+}
+@media only screen and (min-width: 900px) {
+  #experience article {
+    width: 65%;
+    padding: 2em 5em;
+  }
 }
 #experience article:nth-child(2) h3, #experience article:nth-child(3) h3, #experience article:nth-child(7) h3, #experience article:nth-child(8) h3 {
   color: #bb8a35;
 }
 #experience article:nth-child(4) h3, #experience article:nth-child(5) h3, #experience article:nth-child(6) h3 {
   color: #67ACC3;
+}
+@media only screen and (min-width: 600px) {
+  #experience article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 #experience article figure {
   width: 3em;
@@ -769,12 +843,48 @@ footer {
 #experience article figure img {
   width: 100%;
 }
+#experience article ul {
+  padding-left: 1.4em;
+}
+#experience article h3, #experience article h4, #experience article h5 {
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  #experience article h3, #experience article h4, #experience article h5 {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #experience article::after {
+    content: "";
+    height: 0;
+    position: absolute;
+    top: calc(50% - 3em);
+    width: 0;
+    z-index: 1;
+    left: -10px;
+    border: medium solid #ebebeb;
+    border-width: 3em 3em 3em 0;
+    border-color: transparent #ebebeb transparent transparent;
+  }
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 0.2em;
+  background-color: #EBEBEB;
+  top: 5em;
+  bottom: 0;
+  left: 10em;
+  z-index: -1;
+}
 
 .project-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 1em;
+  margin: 1em -2em;
 }
 .project-section div {
   margin: 1em 0em;
@@ -787,10 +897,16 @@ footer {
   margin-left: 0;
 }
 .project-section div figure {
-  width: 35em;
-  height: 17em;
+  width: 18em;
+  height: 8em;
   transition: 0.2s ease-in-out;
   filter: grayscale(90%);
+}
+@media only screen and (min-width: 600px) {
+  .project-section div figure {
+    width: 35em;
+    height: 17em;
+  }
 }
 .project-section div figure:hover {
   transform: scale(102%);
@@ -804,7 +920,7 @@ footer {
 
 #contact {
   background-color: #EBEBEB;
-  margin: 0 -5em;
+  margin: 0 -2em;
   padding: 2em 0em;
 }
 
@@ -812,7 +928,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10em;
+  gap: 10%;
   text-align: center;
   padding: 3em 0em;
 }
@@ -822,12 +938,25 @@ footer {
   align-items: center;
 }
 .contact-section div figure {
-  width: 5em;
+  width: 3em;
+}
+@media only screen and (min-width: 600px) {
+  .contact-section div figure {
+    width: 5em;
+  }
 }
 .contact-section div figure img {
   width: 100%;
 }
 
+.social-bar {
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .social-bar {
+    display: unset;
+  }
+}
 .social-bar ul {
   position: fixed;
   width: 10em;

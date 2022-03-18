@@ -4,15 +4,19 @@
 .btn--empty {
   color: $primary-color;
   border: 0.1em solid $primary-color;
-  padding: 0.7em 3em;
+  padding: 0.5em;
   margin: 1em;
   display: inline-block;
-  max-width: 18em;
+  width: 7em;
   text-align: center;
   border-radius: 0.5em;
   transition: 0.2s ease-in-out;
   &:hover {
     @include hover(white, $primary-color);
+  }
+  @include media(desktop) {
+    width: 10em;
+    padding: 0.5em 1.5em;
   }
 }
 
@@ -20,15 +24,19 @@
   color: white;
   border: 0.1em solid $primary-color;
   background: $primary-color;
-  padding: 0.7em 3em;
-  margin: 0.5em;
+  padding: 0.5em;
+  margin: 0.2em 0.5em;
   display: inline-block;
-  max-width: 18em;
+  width: 7em;
   text-align: center;
   border-radius: 0.5em;
   transition: 0.2s ease-in-out;
   &:hover {
     @include hover($primary-color, white);
+  }
+  @include media(desktop) {
+    width: 10em;
+    padding: 0.5em 1.5em;
   }
 }
 
