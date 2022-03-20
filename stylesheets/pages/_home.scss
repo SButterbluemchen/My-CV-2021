@@ -2,7 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 #main {
-  text-align: left; 
+  text-align: left;
   @include flex-wrap(wrap, center);
   .main-intro {
     @include flex-wrap(wrap, center);
@@ -44,7 +44,7 @@
       p {
         font-size: 0.7em;
         @include media(tablet) {
-          font-size: map-get($map: $fontsizes, $key: p)
+          font-size: map-get($map: $fontsizes, $key: p);
         }
       }
       &:hover {
@@ -186,7 +186,9 @@
     ul {
       padding-left: 1.4em;
     }
-    h3, h4, h5 {
+    h3,
+    h4,
+    h5 {
       text-align: center;
       @include media(tablet) {
         text-align: left;
@@ -288,19 +290,26 @@
 }
 
 .social-bar {
-  display: none;
-  @include media(tablet) {
-    display: unset;
-  }
+  // display: none;
+  // @include media(tablet) {
+  //   display: unset;
+  // }
   ul {
-    position: fixed;
-    width: 10em;
-    bottom: -1em;
-    left: -3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 50;
+    @include flex-wrap(nowrap, space-evenly);
+    padding-left: 0;
+    margin-bottom: -3em;
+    @include media(desktop) {
+      margin-bottom: 0;
+      padding-left: 3em;
+      position: fixed;
+      width: 10em;
+      bottom: -1em;
+      left: -3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 50;
+    }
     li {
       list-style-type: none;
       padding: 0.5em 0em;
@@ -315,7 +324,11 @@
 }
 
 .social-line {
-  height: 10em;
-  width: 0.2em;
-  background-color: $primary-color;
+  display: none;
+  @include media(desktop) {
+    display: unset;
+    height: 10em;
+    width: 0.2em;
+    background-color: $primary-color;
+  }
 }

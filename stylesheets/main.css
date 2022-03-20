@@ -469,6 +469,7 @@ nav {
   margin: 0em -2em;
   top: 0;
   z-index: 99;
+  color: #4d4a4a;
 }
 @media only screen and (max-width: 599px) {
   nav {
@@ -492,6 +493,7 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (min-width: 600px) {
   .menu {
@@ -501,11 +503,9 @@ nav a {
 }
 .menu li a {
   display: block;
-  padding: 0.5em;
   text-decoration: none;
 }
 .menu li a:hover {
-  transform: scale(102%);
   color: #bb8a35;
 }
 .menu li a img {
@@ -521,7 +521,7 @@ nav a {
   order: 1;
   font-size: 2em;
   margin-top: 0.1em;
-  margin-left: -1.5em;
+  margin-left: -1.3em;
 }
 .toggle i {
   color: #bb8a35;
@@ -541,7 +541,6 @@ nav a {
 
 .logo {
   padding: 0em;
-  margin-left: -4em;
 }
 @media only screen and (max-width: 599px) {
   .logo {
@@ -552,10 +551,13 @@ nav a {
   .logo {
     flex: 1;
   }
+  .logo:hover {
+    color: #bb8a35;
+  }
 }
 
 .item {
-  padding: 0.5em;
+  padding: 1em;
   order: 2;
   text-align: left;
   display: none;
@@ -571,16 +573,17 @@ nav a {
     border: none;
   }
 }
-.item a:hover, .item a:hover::after {
-  transform: scale(101%);
-}
 
 .active .item {
   display: block;
 }
 
 ul.menu.active {
-  padding-left: -2em;
+  padding-left: -3em;
+}
+
+.cover {
+  opacity: 0.1;
 }
 
 footer {
@@ -887,11 +890,15 @@ footer {
 #experience article ul {
   padding-left: 1.4em;
 }
-#experience article h3, #experience article h4, #experience article h5 {
+#experience article h3,
+#experience article h4,
+#experience article h5 {
   text-align: center;
 }
 @media only screen and (min-width: 600px) {
-  #experience article h3, #experience article h4, #experience article h5 {
+  #experience article h3,
+#experience article h4,
+#experience article h5 {
     text-align: left;
   }
 }
@@ -996,23 +1003,26 @@ footer {
   width: 100%;
 }
 
-.social-bar {
-  display: none;
-}
-@media only screen and (min-width: 600px) {
-  .social-bar {
-    display: unset;
-  }
-}
 .social-bar ul {
-  position: fixed;
-  width: 10em;
-  bottom: -1em;
-  left: -3em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 50;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-left: 0;
+  margin-bottom: -3em;
+}
+@media only screen and (min-width: 900px) {
+  .social-bar ul {
+    margin-bottom: 0;
+    padding-left: 3em;
+    position: fixed;
+    width: 10em;
+    bottom: -1em;
+    left: -3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 50;
+  }
 }
 .social-bar ul li {
   list-style-type: none;
@@ -1026,7 +1036,13 @@ footer {
 }
 
 .social-line {
-  height: 10em;
-  width: 0.2em;
-  background-color: #bb8a35;
+  display: none;
+}
+@media only screen and (min-width: 900px) {
+  .social-line {
+    display: unset;
+    height: 10em;
+    width: 0.2em;
+    background-color: #bb8a35;
+  }
 }/*# sourceMappingURL=main.css.map */

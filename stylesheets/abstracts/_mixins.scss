@@ -15,11 +15,10 @@
   transform: scale(102%);
 }
 
-@mixin flex-wrap($wrap, $justify-content, $align-items: null) {
+@mixin flex-wrap($wrap, $justify-content) {
   display: flex;
   flex-wrap: $wrap;
   justify-content: $justify-content;
-  $align-items: $align-items;
 }
 
 @mixin media($breakpoint) {
