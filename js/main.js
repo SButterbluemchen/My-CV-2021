@@ -33,18 +33,15 @@ function topFunction() {
 // Toggle mobile menu
 const toggle = document.querySelector('.toggle');
 const menu = document.querySelector('.menu');
-const main = document.getElementById('main');
 
 // active == menu is open with x
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
-    main.classList.remove("cover");
     toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
   } else {
     menu.classList.add("active");
     toggle.querySelector("a").innerHTML = "<i class='far fa-times-circle'></i>";
-    main.classList.add("cover");
   }
 }
 toggle.addEventListener('click', toggleMenu, false);
