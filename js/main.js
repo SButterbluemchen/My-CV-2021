@@ -33,13 +33,11 @@ function topFunction() {
 // Toggle mobile menu
 const toggle = document.querySelector('.toggle');
 const menu = document.querySelector('.menu');
-const body = document.getElementsByTagName('body');
 
 // active == menu is open with x
 function toggleMenu() {
   if (menu.classList.contains("active")) {
     menu.classList.remove("active");
-
     toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
   } else {
     menu.classList.add("active");
@@ -60,6 +58,7 @@ function closeMenu(e) {
 }
 
 document.addEventListener('click', closeMenu, false);
+
 
 // -----------------------------------------------------------------------------
 // TYPEWRITER

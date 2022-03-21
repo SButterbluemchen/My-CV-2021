@@ -489,12 +489,16 @@ nav a {
 }
 
 .menu {
-  background: #fafafa;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 599px) {
+  .menu {
+    position: absolute;
+  }
 }
 @media only screen and (min-width: 600px) {
   .menu {
@@ -558,11 +562,12 @@ nav a {
 
 .item {
   padding: 1em;
+  margin-right: 2em;
   order: 2;
   text-align: left;
   display: none;
   width: 100%;
-  border-bottom: 0.01em solid #bb8a35;
+  border-bottom: 0.05em solid #bb8a35;
 }
 @media only screen and (min-width: 900px) {
   .item {
@@ -579,7 +584,10 @@ nav a {
 }
 
 ul.menu.active {
-  padding-left: -3em;
+  background: #fafafa;
+  padding: 1em 3em 100vh;
+  margin-left: -1em;
+  margin-top: 0em;
 }
 
 footer {

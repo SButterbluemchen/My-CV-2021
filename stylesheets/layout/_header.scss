@@ -26,7 +26,9 @@ nav {
 
 
 .menu {
-  background: $background-color;
+  @include media(mobile) {
+    position: absolute;
+  }
   list-style-type: none;
   @include flex-wrap(wrap, space-between, center);
   // align-items: center;
@@ -81,11 +83,12 @@ nav {
 
 .item {
   padding: 1em;
+  margin-right: 2em;
   order: 2;
   text-align: left;
   display: none;
   width: 100%;
-  border-bottom: 0.01em solid $primary-color;
+  border-bottom: 0.05em solid $primary-color;
   @include media(desktop) {
     width: auto;
     display: block;
@@ -100,5 +103,8 @@ nav {
 }
 
 ul.menu.active {
-  padding-left: -3em;
+  background: $background-color;
+  padding: 1em 3em 100vh;
+  margin-left: -1em;
+  margin-top: 0em;
 }
