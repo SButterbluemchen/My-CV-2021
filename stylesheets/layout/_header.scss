@@ -24,10 +24,11 @@ nav {
   }
 }
 
+
 .menu {
   list-style-type: none;
-  @include flex-wrap(wrap, space-between);
-  align-items: center;
+  @include flex-wrap(wrap, space-between, center);
+  // align-items: center;
   @include media(tablet) {
     justify-content: center;
     font-size: 1.2em;
