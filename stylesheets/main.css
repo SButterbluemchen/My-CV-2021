@@ -465,17 +465,17 @@ p {
 }
 
 nav {
-  padding: 0em 1.2em;
+  padding: 0.1em 1.2em;
   margin: 0em -2em;
-  top: 0;
   z-index: 99;
+  top: 0;
   color: #4d4a4a;
 }
 @media only screen and (max-width: 599px) {
   nav {
     position: -webkit-sticky;
     position: sticky;
-    background-color: #fafafa;
+    background: #fafafa;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -489,6 +489,7 @@ nav a {
 }
 
 .menu {
+  background: #fafafa;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -520,7 +521,6 @@ nav a {
 .toggle {
   order: 1;
   font-size: 2em;
-  margin-top: 0.1em;
   margin-left: -1.3em;
 }
 .toggle i {
